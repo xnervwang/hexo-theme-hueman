@@ -9,6 +9,9 @@
                 <p>&copy; <%= date(new Date(), 'YYYY') %> <a href="<%= config.homepage_domain %>" target="_blank"><%= config.author || config.title %></a></p>
                 <p><%= config.description %></p>
             </div>
+            <div class="footer-plugins">
+              <%- partial('plugin/scripts', { isFooter: true }) %>
+            </div>
         </div>
     </div>
 </footer>
