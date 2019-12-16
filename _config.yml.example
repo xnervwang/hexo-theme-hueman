@@ -19,7 +19,7 @@ customize:
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
         twitter: /
         facebook: /
-        google-plus: /
+        stack-overflow: /
         github: https://github.com/ppoffice/hexo-theme-hueman
         weibo: /
         rss: /
@@ -33,6 +33,7 @@ widgets:
     - tag
     - tagcloud
     - links
+#    - google_adsense
 
 # Search
 search:
@@ -69,12 +70,14 @@ comment:
         on:  # enter true to enable valine
         appId:  # enter the leancloud application appId here
         appKey:  # enter the leancloud application appKey here
-        notify: # enter true to enable <Mail notifier> https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
-        verify: # enter true to enable <Validation code>
+        notify: # enter true to enable <Mail notifier>, default: false; https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+        verify: # enter true to enable <Validation code>, default: false
         placeholder: Just Do It # enter the comment box placeholder
-        avatar: identicon # (''/mm/identicon/monsterid/wavatar/retro/hide), more to see https://valine.js.org/avatar/
-        avatar_cdn: https://gravatar.loli.net/avatar/ # avatar CDN address, default gravatar.loli.net
+        avatar: identicon # (''/mm/identicon/monsterid/wavatar/retro/hide), more to see https://valine.js.org/avatar.html
+        avatar_cdn: https://gravatar.loli.net/avatar/ # avatar CDN address, default gravatar.cat.net
         pageSize: 10 # comments of one page
+        visitor: true # count reading numbers; If true, the numbers will also show below the title of every post
+        recordip: #false # If true, record commenter's ip, which is shown in LeanCloud pannel
     gitalk:
         on: # enter true to enable gitalk
         owner: # GitHub user name
@@ -92,6 +95,9 @@ plugins:
     lightgallery: true # options: true, false
     justifiedgallery: true # options: true, false
     google_analytics: # enter the tracking ID for your Google Analytics
+    google_adsense:
+      publisher_id: # enter the adsense publisher ID (pub-XXXXXXXXXXXXXXX) for your google adsense
+      ad_slot: # the id of your add unit
     baidu_analytics: # enter Baidu Analytics hash key
     bing_site_verification: # enter Bing verification key here
     statcounter:
@@ -101,6 +107,7 @@ plugins:
       public: # enter true if you want a link to your public stats. Must be configured on statcouter as well.
       on: # enter true to enable statcounter
     mathjax: false # options: true, false
+    counter: false # for post words count and time of reading, need hexo-wordcount: https://github.com/willin/hexo-wordcount
 
 # Miscellaneous
 miscellaneous:
@@ -108,6 +115,7 @@ miscellaneous:
         fb_app_id:
         fb_admins:
         twitter_id:
-        google_plus:
     links:
         Hexo: http://hexo.io
+
+poweredby: true

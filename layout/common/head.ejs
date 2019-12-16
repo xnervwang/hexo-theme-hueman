@@ -30,14 +30,13 @@
             keywords.push(page.tags.data[i].name);
         }
     %>
-        <meta name="keywords" content="<%= keywords.join(',') %>" />
+    <meta name="keywords" content="<%= keywords.join(',') %>" />
     <% } %>
     <%- open_graph({
         image:          thumbnail(page),
         fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
         fb_admins:      theme.miscellaneous.open_graph.fb_admins,
         twitter_id:     theme.miscellaneous.open_graph.twitter_id,
-        google_plus:    theme.miscellaneous.open_graph.google_plus,
     }) %>
     <%- meta(page) %>
 
@@ -55,6 +54,6 @@
 
     <%- css('css/style') %>
 
-    <%- js('libs/jquery/3.3.1/jquery.min') %>
+    <%- js('libs/jquery/3.4.1/jquery.min') %>
     <%- partial('plugin/scripts', { isHead: true }) %>
 </head>

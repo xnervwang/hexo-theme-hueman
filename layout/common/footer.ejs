@@ -7,7 +7,9 @@
                     <a href="<%- url_for() %>" class="logo"></a>
                 </h1>
                 <p>&copy; <%= date(new Date(), 'YYYY') %> <a href="<%= config.homepage_domain %>" target="_blank"><%= config.author || config.title %></a></p>
+                <% if (theme.poweredby) { %>
                 <p><%= config.description %></p>
+                <% } %>
             </div>
             <div class="footer-plugins">
               <%- partial('plugin/scripts', { isFooter: true }) %>
